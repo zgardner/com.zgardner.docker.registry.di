@@ -12,4 +12,4 @@ echo "Removing existing container $container_name..."
 docker rm $container_name
 
 echo "Starting new container $container_name..."
-docker run -d --name $container_name -v $host_volume_mount_path:$container_volume_mount_path -p $host_registry_port:$container_registry_port registry:$registry_version
+docker run -d --name $container_name -v "$host_volume_mount_path:$container_volume_mount_path" -p $host_registry_port:$container_registry_port registry:$registry_version
